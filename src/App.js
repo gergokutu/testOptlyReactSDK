@@ -6,7 +6,6 @@ class App extends Component{
   static contextType = OptimizelyContext;
 
   render() {
-    console.log(this.context);
     return (
       <div className="App">
         <div>{this.context.optimizely.user.id}</div>
