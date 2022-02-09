@@ -8,7 +8,7 @@ class App extends Component{
   render() {
     return (
       <div className="App">
-        <div>{this.context.optimizely.user.id}</div>
+        <div>User Id: {this.context.optimizely.user.id}</div>
       </div>
     );
   }
