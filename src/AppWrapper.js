@@ -17,11 +17,12 @@ setLogLevel('debug');
 
 class AppWrapper extends Component {
     render() {
-      return (
-        <OptimizelyProvider optimizely={optimizely} user={{id: 'randomAlphanumericString'}}>
-          <App />
-        </OptimizelyProvider>
-      );
+        const id = (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString();
+        return (
+            <OptimizelyProvider optimizely={optimizely} user={{ id }}>
+                <App />
+            </OptimizelyProvider>
+        );
     }
 }
 
