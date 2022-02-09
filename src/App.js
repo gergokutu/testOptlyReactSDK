@@ -1,11 +1,18 @@
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <div>My stuff will come here...</div>
-    </div>
-  );
+class App extends Component{
+  static contextType = OptimizelyContext;
+
+  render() {
+    console.log(this.context);
+    return (
+      <div className="App">
+        <div>{this.context.optimizely.user.id}</div>
+      </div>
+    );
+  }
 }
 
 export default App;
