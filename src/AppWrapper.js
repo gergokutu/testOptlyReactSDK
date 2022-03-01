@@ -3,7 +3,7 @@ import App from './App';
 import { OptimizelyProvider, createInstance, setLogLevel  } from '@optimizely/react-sdk';
 
 // Instantiate an Optimizely client
-const optimizely = createInstance({
+const optimizelyClient = createInstance({
     sdkKey: 'LMULQewiddKG2mbq22ATt',
     datafileOptions: {
         autoUpdate: true,
@@ -15,11 +15,13 @@ const optimizely = createInstance({
 // Can be 'info', 'debug', 'warn', 'error'
 setLogLevel('debug');
 
+
+
 class AppWrapper extends Component {
     render() {
         const id = (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString();
         return (
-            <OptimizelyProvider optimizely={optimizely} user={{ id }}>
+            <OptimizelyProvider optimizely={optimizelyClient} user={{ id }}>
                 <App />
             </OptimizelyProvider>
         );
