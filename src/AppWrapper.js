@@ -113,9 +113,14 @@ setTimeout(() => {
 
 class AppWrapper extends Component {
     render() {
-        const id = (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString();
+        const user = {
+            id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
+            attributes: {
+                isVip: true
+            },
+        };
         return (
-            <OptimizelyProvider optimizely={optimizelyClient} user={{ id }}>
+            <OptimizelyProvider optimizely={optimizelyClient} user={ user }>
                 <App />
             </OptimizelyProvider>
         );
