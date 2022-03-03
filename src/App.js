@@ -8,7 +8,11 @@ class App extends Component{
   render() {
     return (
       <div className="App">
-        <div>User Id: {this.context.optimizely.user.id}</div>
+        <div>User Id: { this.context.optimizely.user.id }</div>
+        <div>Vip member: { this.context.optimizely.user.attributes.isVip ? 'YES' : 'NO' }</div>
+        { this.context.optimizely.user.attributes.isVip
+          ? <div>VIP content</div>
+          : <div>Ask membership</div> }
       </div>
     );
   }
