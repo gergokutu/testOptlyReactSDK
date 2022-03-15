@@ -7,11 +7,13 @@ static contextType = OptimizelyContext;
     render() {
         return (
             <div> ***** VIP Content ***** 
-                <OptimizelyExperiment experiment='workramp_new_node_experiment'>
+                <OptimizelyExperiment experiment='workrampnode'>
                 {(variation) => (
-                variation === 'testvariation01'
+                variation === 'variation_1'
                     ? <div>Var 1</div>
-                    : <div>Var 2</div>
+                    : variation === 'variation_2'
+                        ? <div>Var 2</div>
+                        : <div>Var 3</div>
                 )}
                 </OptimizelyExperiment>
             </div>
