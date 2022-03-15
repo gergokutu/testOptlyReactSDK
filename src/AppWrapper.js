@@ -8,7 +8,7 @@ const optimizelyClient = createInstance({
     datafileOptions: {
         autoUpdate: true,
         updateInterval: 600000, // 10 minutes in milliseconds
-        urlTemplate: 'https://cdn.optimizely.com/datafiles/LMULQewiddKG2mbq22ATt.json'
+        urlTemplate: 'https://cdn.optimizely.com/datafiles/QsYvasXvtDWoqYH1KC2tK.json'
       }
 });
 
@@ -116,7 +116,7 @@ class AppWrapper extends Component {
         const user = {
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
-                isVip: true
+                membershipStatus: 'gold'
             },
         };
         

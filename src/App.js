@@ -10,10 +10,7 @@ class App extends Component{
     return (
       <div className="App">
         <div>User Id: { this.context.optimizely.user.id }</div>
-        <div>Vip member: { this.context.optimizely.user.attributes.isVip ? 'YES' : 'NO' }</div>
-        { this.context.optimizely.user.attributes.isVip
-          ? <VipContent>VIP content</VipContent>
-          : <div>Ask membership</div> }
+        <VipContent >VIP content</VipContent>
       </div>
     );
   }
