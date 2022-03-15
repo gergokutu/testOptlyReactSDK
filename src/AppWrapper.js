@@ -4,7 +4,7 @@ import { OptimizelyProvider, createInstance, setLogLevel } from '@optimizely/rea
 
 // Instantiate an Optimizely client
 const optimizelyClient = createInstance({
-    sdkKey: 'LMULQewiddKG2mbq22ATt',
+    sdkKey: 'QsYvasXvtDWoqYH1KC2tK',
     datafileOptions: {
         autoUpdate: true,
         updateInterval: 600000, // 10 minutes in milliseconds
