@@ -14,6 +14,7 @@ static contextType = OptimizelyContext;
                     <div>User is bucketed into "{ variation }" to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
                     <div>User Id: { this.context.optimizely.user.id }</div>
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
+                    { this.props.optimizely.track('testEvent_01') }
                 </div> 
                 :
                 <div>
