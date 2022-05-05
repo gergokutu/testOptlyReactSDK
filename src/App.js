@@ -9,8 +9,7 @@ class App extends Component{
   render() {
     return (
       <div className="App">
-        <div>User Id: { this.context.optimizely.user.id }</div>
-        <VipContent >VIP content</VipContent>
+        <VipContent />
       </div>
     );
   }

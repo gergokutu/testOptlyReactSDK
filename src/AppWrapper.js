@@ -4,11 +4,11 @@ import { OptimizelyProvider, createInstance, setLogLevel } from '@optimizely/rea
 
 // Instantiate an Optimizely client
 const optimizelyClient = createInstance({
-    sdkKey: 'QsYvasXvtDWoqYH1KC2tK',
+    sdkKey: 'LMULQewiddKG2mbq22ATt',
     datafileOptions: {
         autoUpdate: true,
         updateInterval: 600000, // 10 minutes in milliseconds
-        urlTemplate: 'https://cdn.optimizely.com/datafiles/QsYvasXvtDWoqYH1KC2tK.json'
+        urlTemplate: 'https://cdn.optimizely.com/datafiles/LMULQewiddKG2mbq22ATt.json'
       }
 });
 
@@ -116,7 +116,7 @@ class AppWrapper extends Component {
         const user = {
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
-                membershipStatus: 'gold'
+                isVIP: Math.random() < 0.5 ? true : false
             },
         };
         

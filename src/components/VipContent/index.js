@@ -6,13 +6,21 @@ static contextType = OptimizelyContext;
 
     render() {
         return (
-            <OptimizelyExperiment experiment='workrampnode'>
+            <OptimizelyExperiment experiment='workramp_new_node_experiment'>
             {(variation) => (
-            variation === 'variation_1'
-                ? <div>Var 1</div>
-                : variation === 'variation_2'
-                    ? <div>Var 2</div>
-                    : <div>Var 3</div>
+                variation
+                ?
+                <div>
+                    <div>User is bucketed into "{variation}"</div>
+                    <div>User Id: { this.context.optimizely.user.id }</div>
+                    <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
+                </div> 
+                :
+                <div>
+                    <div>You will need VIP membership to enter the experiment! {variation}</div>
+                    <div>User Id: { this.context.optimizely.user.id }</div>
+                    <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
+                </div> 
             )}
             </OptimizelyExperiment>
         );
