@@ -17,7 +17,7 @@ static contextType = OptimizelyContext;
                 </div> 
                 :
                 <div>
-                    <div>You will need VIP membership to enter the experiment! {variation}</div>
+                    <div>You will need VIP membership to enter the experiment!</div>
                     <div>User Id: { this.context.optimizely.user.id }</div>
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
                 </div> 
