@@ -1,6 +1,11 @@
 import { Component } from 'react';
 import App from './App';
-import { OptimizelyProvider, createInstance, setLogLevel, enums } from '@optimizely/react-sdk';
+import { 
+    OptimizelyProvider, 
+    createInstance, 
+    setLogLevel, 
+    enums
+} from '@optimizely/react-sdk';
 
 // Instantiate an Optimizely client
 const optimizelyClient = createInstance({
@@ -9,7 +14,9 @@ const optimizelyClient = createInstance({
         autoUpdate: true,
         updateInterval: 600000, // 10 minutes in milliseconds
         urlTemplate: 'https://cdn.optimizely.com/datafiles/LMULQewiddKG2mbq22ATt.json'
-      }
+    },
+    eventBatchSize: 10,
+    eventFlushInterval: 1000,
 });
 
 // Can be 'info', 'debug', 'warn', 'error'
@@ -99,7 +106,6 @@ setTimeout(() => {
     });
 
     // listen to OPTIMIZELY_CONFIG_UPDATE to get updated data
-
     optimizelyClient.notificationCenter.addNotificationListener(
         enums.NOTIFICATION_TYPES.OPTIMIZELY_CONFIG_UPDATE,
         function () {
