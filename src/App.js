@@ -4,7 +4,7 @@ import './App.css';
 import VipContent from './components/VipContent';
 
 class App extends Component{
-  static contextType = OptimizelyContext;
+  // static contextType = OptimizelyContext;
 
   render() {
     return (
