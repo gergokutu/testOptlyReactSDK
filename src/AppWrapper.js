@@ -9,7 +9,7 @@ import {
 
 // Instantiate an Optimizely client
 const optimizelyClient = createInstance({
-    sdkKey: 'LMULQewiddKG2mbq22ATt',
+    sdkKey: 'LMULQewiddKG2mbq22ATt', // Prod.:LMULQewiddKG2mbq22ATt Dev.: B6Y3da7iXb4RtYAg4ZgCr
     datafileOptions: {
         autoUpdate: true,
         updateInterval: 600000, // 10 minutes in milliseconds
@@ -124,7 +124,8 @@ class AppWrapper extends Component {
             attributes: {
                 isVIP: Math.random() < 0.5 ? true : false,
                 location: 'Amsterdam',
-                age: 18
+                age: 18,
+                mab: Math.random() < 1.5 ? true : false
             },
         };
         

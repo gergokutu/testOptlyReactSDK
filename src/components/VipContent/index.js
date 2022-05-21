@@ -16,6 +16,7 @@ static contextType = OptimizelyContext;
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
                     <div>Location: { this.context.optimizely.user.attributes.location }</div>
                     <div>Location: { this.context.optimizely.user.attributes.age }</div>
+                    <div>isMab: { this.context.optimizely.user.attributes.mab ? 'True' : 'False' }</div>
                     { this.props.optimizely.track('testEvent_01') }
                 </div> 
                 :
@@ -25,6 +26,7 @@ static contextType = OptimizelyContext;
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
                     <div>Location: { this.context.optimizely.user.attributes.location }</div>
                     <div>Location: { this.context.optimizely.user.attributes.age }</div>
+                    <div>isMab: { this.context.optimizely.user.attributes.mab ? 'True' : 'False' }</div>
                 </div> 
             )}
             </OptimizelyExperiment>
