@@ -14,13 +14,17 @@ static contextType = OptimizelyContext;
                     <div>User is bucketed into "{ variation }" to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
                     <div>User Id: { this.context.optimizely.user.id }</div>
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
+                    <div>Location: { this.context.optimizely.user.attributes.location }</div>
+                    <div>Location: { this.context.optimizely.user.attributes.age }</div>
                     { this.props.optimizely.track('testEvent_01') }
                 </div> 
                 :
                 <div>
-                    <div>You will need VIP membership to enter the experiment! But still able to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
+                    <div>You will need VIP membership to enter Experiment 1! But still able to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
                     <div>User Id: { this.context.optimizely.user.id }</div>
                     <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
+                    <div>Location: { this.context.optimizely.user.attributes.location }</div>
+                    <div>Location: { this.context.optimizely.user.attributes.age }</div>
                 </div> 
             )}
             </OptimizelyExperiment>

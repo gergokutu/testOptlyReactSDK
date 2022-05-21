@@ -122,7 +122,9 @@ class AppWrapper extends Component {
         const user = {
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
-                isVIP: Math.random() < 0.5 ? true : false
+                isVIP: Math.random() < 0.5 ? true : false,
+                location: 'Amsterdam',
+                age: 18
             },
         };
         
