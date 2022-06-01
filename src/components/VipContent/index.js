@@ -11,6 +11,7 @@ static contextType = OptimizelyContext;
                 variation
                 ?   (
                         <div>
+                            <br/>
                             <div>***** Via OptimizelyExperiment *****</div>
                             <div>User is bucketed into "{ variation }" to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
                             <div>User Id: { this.context.optimizely.user.id }</div>
@@ -24,6 +25,7 @@ static contextType = OptimizelyContext;
                 :
                     (
                         <div>
+                            <br/>
                             <div>***** Via OptimizelyExperiment *****</div>
                             <div>You will need VIP membership to enter Experiment 1! But still able to play: { this.props.optimizely.getFeatureVariableString('workramp_new_node', 'game').toUpperCase() }</div>
                             <div>User Id: { this.context.optimizely.user.id }</div>
