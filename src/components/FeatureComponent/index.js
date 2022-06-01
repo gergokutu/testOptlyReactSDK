@@ -7,8 +7,18 @@ class FeatureComponent extends Component {
       <OptimizelyFeature feature="workramp_new_node">
         {(isEnabled, variables) => (
           isEnabled
-          ? (<p> Feature enabled! Variable values: { JSON.stringify(variables) } </p>)
-          : (<p> Feature not enabled. Variable values: { JSON.stringify(variables) } </p>)
+          ? (
+              <div>
+                <div>***** Via OptimizelyFeature *****</div>
+                <p> Feature enabled! Variable values: { JSON.stringify(variables) } </p>
+              </div>
+            )
+          : (
+              <div>
+                <div>***** Via OptimizelyFeature *****</div>
+                <p> Feature NOT enabled! Variable values: { JSON.stringify(variables) } </p>
+              </div>
+            )
         )}
       </OptimizelyFeature>
     )
