@@ -8,7 +8,7 @@ class VariationComponents extends Component {
     render() {
         return (
             <OptimizelyExperiment experiment="workramp_new_node_experiment" timeout={3000}>
-                <OptimizelyVariation variation="testVariation_01">
+                <OptimizelyVariation variation="testvariation01">
                     <div>
                         <br/>
                             <div>***** Via OptimizelyExperiment *****</div>
@@ -21,7 +21,7 @@ class VariationComponents extends Component {
                     </div> 
                 </OptimizelyVariation>
         
-                <OptimizelyVariation variation="testVariation_02">
+                <OptimizelyVariation variation="testvariation_02">
                     Variation 2
                 </OptimizelyVariation>
         
