@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './App.css';
 import VipContent from './components/VipContent';
 import FeatureComponent from './components/FeatureComponent';
+import VariationComponents from './components/VariationComponents';
 
 class App extends Component{
   // static contextType = OptimizelyContext;
@@ -12,6 +13,7 @@ class App extends Component{
       <div className="App">
         <FeatureComponent />
         <VipContent />
+        <VariationComponents />
       </div>
     );
   }
