@@ -9,14 +9,12 @@ class FeatureComponent extends Component {
           isEnabled
           ? (
               <div>
-                <br/>
                 <div>***** Via OptimizelyFeature *****</div>
                 <div> Feature enabled! Variable values: { JSON.stringify(variables) } </div>
               </div>
             )
           : (
               <div>
-                <br/>
                 <div>***** Via OptimizelyFeature *****</div>
                 <div> Feature NOT enabled! Variable values: { JSON.stringify(variables) } </div>
               </div>
