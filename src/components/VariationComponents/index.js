@@ -14,7 +14,7 @@ class VariationComponents extends Component {
                 <OptimizelyVariation variation="testvariation01">
                     <div>
                         <br/>
-                         <div>***** Via OptimizelyExperiment *****</div>
+                         <div>***** Via OptimizelyVariation *****</div>
                          <div>Variation key: testvariation01</div>
                          <div>User Id: { this.context.optimizely.user.id }</div>
                     </div> 
@@ -23,7 +23,7 @@ class VariationComponents extends Component {
                 <OptimizelyVariation variation="testvariation_02">
                     <div>
                         <br/>
-                         <div>***** Via OptimizelyExperiment *****</div>
+                         <div>***** Via OptimizelyVariation *****</div>
                          <div>Variation key: testvariation_02</div>
                          <div>User Id: { this.context.optimizely.user.id }</div>
                     </div> 
@@ -32,7 +32,7 @@ class VariationComponents extends Component {
                 <OptimizelyVariation default>
                     <div>
                         <br/>
-                         <div>***** Via OptimizelyExperiment *****</div>
+                         <div>***** Via OptimizelyVariation *****</div>
                          <div>Experiment "workramp_new_node_experiment" is NOT active</div>
                     </div> 
                 </OptimizelyVariation>

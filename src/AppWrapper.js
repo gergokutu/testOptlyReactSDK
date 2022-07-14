@@ -125,7 +125,7 @@ class AppWrapper extends Component {
                 isVIP: Math.random() < 0.5 ? true : false,
                 location: 'Amsterdam',
                 age: 18,
-                mab: Math.random() < 1.5 ? true : false
+                mab: Math.random() < 0.9 ? true : false
             },
         };
         
