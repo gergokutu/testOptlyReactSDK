@@ -1,9 +1,9 @@
 // import { OptimizelyContext } from '@optimizely/react-sdk';
 import { Component } from 'react';
 import './App.css';
-import VipContent from './components/VipContent';
+import ExperimentComponent from './components/ExperimentComponent';
 import FeatureComponent from './components/FeatureComponent';
-import VariationComponents from './components/VariationComponents';
+import VariationComponent from './components/VariationComponent';
 
 class App extends Component{
   // static contextType = OptimizelyContext;
@@ -12,8 +12,8 @@ class App extends Component{
     return (
       <div className="App">
         <FeatureComponent />
-        <VipContent />
-        <VariationComponents />
+        <ExperimentComponent />
+        <VariationComponent />
       </div>
     );
   }

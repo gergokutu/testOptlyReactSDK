@@ -5,7 +5,7 @@ import {
     OptimizelyContext
   } from '@optimizely/react-sdk'
   
-class VariationComponents extends Component {
+class VariationComponent extends Component {
     static contextType = OptimizelyContext;
 
     render() {
@@ -41,4 +41,4 @@ class VariationComponents extends Component {
     }
 }
 
-export default VariationComponents;
+export default VariationComponent;
