@@ -5,8 +5,8 @@ class SetForcedVariationComponent extends Component {
     static contextType = OptimizelyContext;
     
     render() {
-        this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "secons_var2");
-        console.log('eewefwefwewefwe', this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "secons_var2"));
+        this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "forcedId", "secons_var2");
+        console.log('eewefwefwewefwe', this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "forcedId", "secons_var2"));
         return (
             <OptimizelyExperiment experiment="workramp_new_node_experiment__second" timeout={3000}>
                 <OptimizelyVariation variation="secons_var2">
@@ -14,7 +14,7 @@ class SetForcedVariationComponent extends Component {
                         <br/>
                          <div>***** Via SetForcedVariation *****</div>
                          <div>Variation key: secons_var2</div>
-                         <div>User Id: { this.context.optimizely.user.id }</div>
+                         <div>User Id: { this.props.optimizely.user.id }</div>
                     </div> 
                 </OptimizelyVariation>
 
@@ -23,7 +23,7 @@ class SetForcedVariationComponent extends Component {
                         <br/>
                          <div>***** Via SetForcedVariation *****</div>
                          <div>Variation key: second_var1</div>
-                         <div>User Id: { this.context.optimizely.user.id }</div>
+                         <div>User Id: { this.props.optimizely.user.id }</div>
                     </div> 
                 </OptimizelyVariation>
 
