@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { OptimizelyContext, OptimizelyExperiment, withOptimizely } from '@optimizely/react-sdk';
 
-class VipContent extends Component {
+class ExperimentComponent extends Component {
 static contextType = OptimizelyContext;
 
     render() {
@@ -17,7 +17,7 @@ static contextType = OptimizelyContext;
                             <div>User Id: { this.context.optimizely.user.id }</div>
                             <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
                             <div>Location: { this.context.optimizely.user.attributes.location }</div>
-                            <div>Location: { this.context.optimizely.user.attributes.age }</div>
+                            <div>Age: { this.context.optimizely.user.attributes.age }</div>
                             <div>isMab: { this.context.optimizely.user.attributes.mab ? 'True' : 'False' }</div>
                             { this.props.optimizely.track('testEvent_01') }
                         </div> 
@@ -31,7 +31,7 @@ static contextType = OptimizelyContext;
                             <div>User Id: { this.context.optimizely.user.id }</div>
                             <div>VIP member: { this.context.optimizely.user.attributes.isVIP ? 'YES' : 'NO'}</div>
                             <div>Location: { this.context.optimizely.user.attributes.location }</div>
-                            <div>Location: { this.context.optimizely.user.attributes.age }</div>
+                            <div>Age: { this.context.optimizely.user.attributes.age }</div>
                             <div>isMab: { this.context.optimizely.user.attributes.mab ? 'True' : 'False' }</div>
                         </div> 
                     )
@@ -41,4 +41,4 @@ static contextType = OptimizelyContext;
     }
 }
 
-export default withOptimizely(VipContent);
+export default withOptimizely(ExperimentComponent);

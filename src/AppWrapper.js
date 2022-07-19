@@ -120,6 +120,8 @@ setTimeout(() => {
 class AppWrapper extends Component {
     render() {
         const user = {
+            // use the allowlistedID
+            // id: 'allowlistedID'
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
                 isVIP: Math.random() < 0.5 ? true : false,
