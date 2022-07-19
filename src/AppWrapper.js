@@ -124,15 +124,15 @@ class AppWrapper extends Component {
             // id: 'allowlistedID'
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
-                isVIP: Math.random() < 0.5 ? true : false,
+                isVIP: Math.random() < 0 ? true : false,
                 location: 'Amsterdam',
                 age: 18,
-                mab: Math.random() < 0.9 ? true : false
+                mab: Math.random() < 0 ? true : false
             },
         };
         
         return (
-            <OptimizelyProvider optimizely={optimizelyClient} user={ user }>
+            <OptimizelyProvider optimizely={optimizelyClient} user={user}>
                 <App />
             </OptimizelyProvider>
         );
