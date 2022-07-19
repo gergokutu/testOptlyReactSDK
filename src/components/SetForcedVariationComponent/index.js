@@ -6,7 +6,7 @@ class SetForcedVariationComponent extends Component {
     
     render() {
         this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "forcedId", "secons_var2");
-        console.log('eewefwefwewefwe', this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "forcedId", "secons_var2"));
+        console.log('setForcedVariation >>>', this.props.optimizely.setForcedVariation("workramp_new_node_experiment__second", "forcedId", "secons_var2"));
         return (
             <OptimizelyExperiment experiment="workramp_new_node_experiment__second" timeout={3000}>
                 <OptimizelyVariation variation="secons_var2">
