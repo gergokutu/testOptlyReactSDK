@@ -117,6 +117,7 @@ setTimeout(() => {
     console.log('***** OptimizelyConfig END *****');
 }, 1000)
 
+
 class AppWrapper extends Component {
     render() {
         const user = {
@@ -124,14 +125,21 @@ class AppWrapper extends Component {
             // id: 'allowlistedID'
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
-                isVIP: Math.random() < 0 ? true : false,
-                location: 'Amsterdam',
-                age: 18,
-                mab: Math.random() < 0 ? true : false
-            },
-        };
-        
-        return (
+                    isVIP: Math.random() < 0 ? true : false,
+                    location: 'Amsterdam',
+                    age: 18,
+                    mab: Math.random() < 0 ? true : false
+                },
+            };
+            
+            // Wait for the optimizelyClient to be ready to set the forced variation
+            optimizelyClient.onReady({timeout: 5000}).then(result => {
+                optimizelyClient.setForcedVariation("workramp_new_node_experiment__second", "second_var1");
+                console.log('setForcedVariation >>>', optimizelyClient.setForcedVariation("workramp_new_node_experiment__second", "second_var1"));
+                console.log('getForcedVariation >>>', optimizelyClient.getForcedVariation("workramp_new_node_experiment__second"));
+            });
+                
+            return (
             <OptimizelyProvider optimizely={optimizelyClient} user={user}>
                 <App />
             </OptimizelyProvider>
