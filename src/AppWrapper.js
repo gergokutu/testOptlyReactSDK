@@ -45,7 +45,7 @@ setTimeout(() => {
     });
 
     console.log(`[OptimizelyConfig] events:`);
-        config.events.forEach((event) => {
+    config.events.forEach((event) => {
         console.log(
             `[OptimizelyEvent] -- (id, key, experimentIds) = (${event.id}, ${event.key}, ${event.experimentsIds})`
         );
@@ -122,7 +122,8 @@ class AppWrapper extends Component {
     render() {
         const user = {
             // use the allowlistedID
-            // id: 'allowlistedID'
+            // id: 'allowlistedID',
+            // id: '',
             id: (Math.floor(Math.random() * (100000 - 10000) + 10000)).toString(),
             attributes: {
                     isVIP: Math.random() < 0.5 ? true : false,
